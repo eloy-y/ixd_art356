@@ -17,3 +17,7 @@ This is a link -> [Play this game!](https://store.steampowered.com/app/3375780/T
 ### This is an image
 
 ![This is Crow Armbrust from Trails](https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/1457510/162a62174367365017e55df087b037f6a2cdb7bc.jpg)
+
+### Journal Entries
+
+Check out my [Journal 01](journal/8-26-25entry.md)
