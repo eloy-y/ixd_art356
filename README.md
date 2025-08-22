@@ -4,7 +4,7 @@ This repo will host all of my readings and projects for the Art 356 course!
 
 tbc...
 
-This is a link -> [Play this game!]([https://p5js.org/](https://store.steampowered.com/app/3375780/Trails_in_the_Sky_1st_Chapter/))
+This is a link -> [Play this game!](https://store.steampowered.com/app/3375780/Trails_in_the_Sky_1st_Chapter/)
 
 ## This is Text Styles
 
