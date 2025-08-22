@@ -6,7 +6,7 @@ tbc...
 
 This is a link -> [Play this game!](https://store.steampowered.com/app/3375780/Trails_in_the_Sky_1st_Chapter/)
 
-## This is Text Styles
+### This is Text Styles
 
 **Bold Text** use two asteriks
 
