@@ -4,4 +4,16 @@ This repo will host all of my readings and projects for the Art 356 course!
 
 tbc...
 
-This is a link -> [Hello](https://p5js.org/)
+This is a link -> [Play this game!]([https://p5js.org/](https://store.steampowered.com/app/3375780/Trails_in_the_Sky_1st_Chapter/))
+
+## This is Text Styles
+
+**Bold Text** use two asteriks
+
+*Italics* use one asterisk
+
+<ins>Underline</ins> use ins inside arrow brackets
+
+### This is an image
+
+![This is Crow Armbrust from Trails](https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/1457510/162a62174367365017e55df087b037f6a2cdb7bc.jpg)
