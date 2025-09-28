@@ -99,6 +99,8 @@ let totalTime;
 
 let cursor;
 
+let grabSound, blenderSound, bgm, winSound;
+
 function preload() {
   for (let i = 0; i < fruits.length; i++) {
     randomFruit[fruitName[i]] = loadImage(fruits[i]);
@@ -125,6 +127,11 @@ function preload() {
   pixelFont = loadFont("dogicapixel.ttf");
 
   cursor = loadImage("cursor.png");
+
+  grabSound = loadSound("grab.mp3");
+  blenderSound = loadSound("blenderbg.mp3");
+  bgm = loadSound("bgm.mp3");
+  winSound = loadSound("winSound.mp3");
 }
 
 let gameOver = false;
@@ -139,6 +146,13 @@ function setup() {
 
   noCursor();
 
+  bgm.setVolume(0.2);
+  bgm.loop();
+
+  blenderSound.setVolume(0.1);
+  grabSound.setVolume(1);
+  winSound.setVolume(0.3);
+  
   // intruction buttons
   but1 = new ButtonN(width / 2, 360);
   but2 = new ButtonE(width / 2, 540);
@@ -229,6 +243,8 @@ function draw() {
   // win screen condtion
   if (score === 10 && endlessMode === false) {
     winScreen();
+    blenderSound.stop();
+    winSound.play();
     return;
   }
 
@@ -332,6 +348,7 @@ function mousePressed() {
           // ✅ match target correctly
           score++;
           spawnFruits();
+          grabSound.play();
           // firstScreen = false;
         } else {
           gameOver = true;
@@ -481,6 +498,7 @@ class ButtonN {
       startGame = true;
       console.log("open normal");
       totalTime = millis() + 1600;
+      blenderSound.loop();
     }
   }
 
@@ -522,6 +540,7 @@ class ButtonE {
       startGame = true;
       totalTime = millis() + 1600;
       endlessMode = true;
+      blenderSound.loop();
     }
   }
 
