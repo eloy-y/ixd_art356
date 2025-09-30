@@ -21,3 +21,11 @@ This is a link -> [Play this game!](https://store.steampowered.com/app/3375780/T
 ### Journal Entries
 
 Check out my [Journal 01](journal/8-26-25entry.md)
+
+### Exercises
+
+Check out my [Exercise 1](https://eloy-y.github.io/ixd_art356/exercises/characterRandomizer/)
+
+### Projects
+
+Check out my [Project 1](projects/project1/README.md)
