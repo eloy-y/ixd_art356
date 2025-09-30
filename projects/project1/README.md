@@ -15,4 +15,5 @@ I'm very happy with how the game turned out. Things I want to add in the future,
 
 ### Credits and Sources
 [Fruit Assets](https://dantepixels.itch.io/small-fruits-asset-16x16) - Twitter: [@pixelhead](https://x.com/Pixelahead)
+
 ChatGPT was used for troubleshooting
