@@ -95,7 +95,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1400, 980);
+  let canvas = createCanvas(1400, 980);
+  canvas.parent("sketch-container");
 }
 
 function draw() {
