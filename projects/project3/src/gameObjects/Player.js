@@ -19,49 +19,49 @@ export class Player extends Phaser.Physics.Arcade.Sprite
         this.anims.create({
             key: 'left',
             frames: this.anims.generateFrameNumbers('move', { start: 0, end: 7 }),
-            frameRate: 12,
+            frameRate: 8,
             repeat: -1
     });
 
         this.anims.create({
             key: 'right',
             frames: this.anims.generateFrameNumbers('move', { start: 0, end: 7 }),
-            frameRate: 12,
+            frameRate: 8,
             repeat: -1
     });
 
         this.anims.create({
             key: 'up',
             frames: this.anims.generateFrameNumbers('move', { start: 16, end: 23 }),
-            frameRate: 12,
+            frameRate: 8,
             repeat: -1
     });
 
         this.anims.create({
             key: 'down',
             frames: this.anims.generateFrameNumbers('move', { start: 8, end: 15 }),
-            frameRate: 12,
+            frameRate: 8,
             repeat: -1
     });
 
         this.anims.create({
             key: 'idleside',
             frames: this.anims.generateFrameNumbers('mc', { start: 0, end: 3 }),
-            frameRate: 6,
+            frameRate: 4,
             repeat: -1
     });
 
         this.anims.create({
             key: 'idledown',
             frames: this.anims.generateFrameNumbers('mc', { start: 4, end: 7 }),
-            frameRate: 6,
+            frameRate: 4,
             repeat: -1
     });
 
         this.anims.create({
             key: 'idleup',
             frames: this.anims.generateFrameNumbers('mc', { start: 8, end: 11 }),
-            frameRate: 6,
+            frameRate: 4,
             repeat: -1
     });
 
@@ -69,26 +69,26 @@ export class Player extends Phaser.Physics.Arcade.Sprite
 
     moveLeft()
     {
-        this.setVelocityX(-50);
+        this.setVelocityX(-45);
 
         this.anims.play('left', true);
     }
 
     moveRight()
     {
-        this.setVelocityX(50);
+        this.setVelocityX(45);
 
         this.anims.play('right', true);
     }
 
     moveUp(){
-        this.setVelocityY(-50);
+        this.setVelocityY(-45);
 
         this.anims.play('up', true);
     }
 
     moveDown(){
-        this.setVelocityY(50);
+        this.setVelocityY(45);
 
         this.anims.play('down', true);
     }
