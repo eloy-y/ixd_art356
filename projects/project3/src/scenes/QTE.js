@@ -1,10 +1,13 @@
+import { ITEMS } from '../constants/items.js';
+
 export class QTE extends Phaser.Scene {
   constructor() {
     super('QTE');
   }
 
-  init() {
-    this.totalRounds = 10;        // how many QTEs you need to complete
+  init(data) {
+    this.totalRounds = 7;        // how many QTEs you need to complete
+    this.rewardType = (data && data.rewardType) || 'apple';
     this.completedRounds = 0;     // how many you've done so far
     this.timeLimit = 2000;        // ms allowed to react
     this.roundTimer = null;
@@ -15,7 +18,7 @@ export class QTE extends Phaser.Scene {
   create() {
     const { width, height } = this.scale;
 
-    const rect = this.add.rectangle(width /2, height / 2,  360, 240, 0x74a195, 0.8);
+    const rect = this.add.rectangle(width /2, height / 2,  width, height, 0x74a195, 0.8);
     // rect.setAlpha(10);
 
     // Title / instructions
@@ -25,13 +28,6 @@ export class QTE extends Phaser.Scene {
         color: '#ffffff',
       })
       .setOrigin(0.5);
-
-    // this.add
-    //   .text(width / 2, 120, 'Complete 10 QTEs before failing!', {
-    //     fontSize: '18px',
-    //     color: '#cccccc',
-    //   })
-    //   .setOrigin(0.5);
 
     // ----- Progress Bar (full at start, shrinks each success) -----
     this.barMaxWidth = 300; // total width of the bar
@@ -150,6 +146,24 @@ export class QTE extends Phaser.Scene {
       if (this.completedRounds >= this.totalRounds) {
         this.feedbackText.setText('All QTEs complete!');
         this.time.delayedCall(800, () => {
+          const gameScene = this.scene.get('Game');
+          if (gameScene && gameScene.inventory) {
+            const itemKey = this.rewardType || 'apple';
+            gameScene.inventory[itemKey] =
+              (gameScene.inventory[itemKey] || 0) + 1;
+            if (gameScene.updateInventoryText) {
+              gameScene.updateInventoryText();
+            }
+            if (gameScene.showFloatingText && gameScene.player) {
+              const itemName = ITEMS[itemKey]?.name || itemKey;
+              gameScene.showFloatingText(
+                `Found ${itemName}!`,
+                gameScene.player.x,
+                gameScene.player.y
+              );
+            }
+          }
+
           this.scene.resume('Game', {
             success: true,
             completed: this.completedRounds,

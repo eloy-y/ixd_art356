@@ -28,13 +28,19 @@ export class Preloader extends Phaser.Scene {
 
         this.load.spritesheet(
             'mc',
-            'idle.png',
+            'angler - idle.png',
             {frameWidth: 80, frameHeight: 80}
         );
 
         this.load.spritesheet(
             'move',
-            'walk.png',
+            'angler - walk.png',
+            {frameWidth: 80, frameHeight: 80}
+        );
+
+        this.load.spritesheet(
+            'angler',
+            'angler - fishing reeling.png',
             {frameWidth: 80, frameHeight: 80}
         );
 
@@ -44,6 +50,28 @@ export class Preloader extends Phaser.Scene {
             {frameWidth: 32, frameHeight: 48}
         );
 
+        this.load.spritesheet(
+            'chicken',
+            'Chicken.png',
+            {frameWidth: 16, frameHeight: 16}
+        );
+
+        this.load.spritesheet(
+            'cow',
+            'Cow.png',
+            {frameWidth: 32, frameHeight: 32}
+        );
+
+        this.load.image(
+            'tree',
+            'Tree.png',
+        );
+
+        this.load.image(
+            'lake',
+            'lake.png',
+        );
+
         // tiled map
         this.load.tilemapTiledJSON('map1','map/map2.json');
 
@@ -51,6 +79,7 @@ export class Preloader extends Phaser.Scene {
         this.load.image('ts_dirt', 'tileset/dirt.png');
         this.load.image('ts_summer', 'tileset/summer.png');
         this.load.image('ts_house', 'tileset/House.png');
+        this.load.image('ts_housedetails', 'tileset/House.png');
         this.load.image('ts_water_shallow', 'tileset/shallow1.png');
         this.load.image('ts_waterfall', 'tileset/waterfall1.png');
         this.load.image('ts_water_deep', 'tileset/deep1.png');
@@ -64,6 +93,16 @@ export class Preloader extends Phaser.Scene {
         this.load.image('ts_flower', 'tileset/Flower.png');
         this.load.image('ts_sign', 'tileset/Sign.png');
 
+        // Placeholder fish icons (replace files in assets/fish later if you like)
+        this.load.image('fish_anchovy', 'fish/fish_anchovy.png');
+        this.load.image('fish_pufferfish', 'fish/fish_pufferfish.png');
+        this.load.image('fish_catfish', 'fish/fish_catfish.png');
+        this.load.image('fish_trout', 'fish/fish_trout.png');
+        this.load.image('fish_bass', 'fish/fish_bass.png');
+        this.load.image('fish_crab', 'fish/fish_crab.png');
+        this.load.image('fish_placeholder', 'fish/fish_placeholder.png');
+
+
     }
 
     create() {
@@ -71,6 +110,6 @@ export class Preloader extends Phaser.Scene {
         //  For example, you can define global animations here, so we can use them in other scenes.
 
         //  Move to the MainMenu. You could also swap this for a Scene Transition, such as a camera fade.
-        this.scene.start('Game');
+        this.scene.start('Instructions');
     }
 }
