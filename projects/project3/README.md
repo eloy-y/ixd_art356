@@ -10,7 +10,7 @@
   - [Animals](https://otterisk.itch.io/hana-caraka-livestock-fish)
 
 # Assets: Pixel Gnome Fishing Pack by Pixel Gnome 
-![itch.io profile](https://pixelgnome.itch.io/)
+[itch.io profile](https://pixelgnome.itch.io/)
 
   - [Fishing Pack](https://pixelgnome.itch.io/fish)
 
